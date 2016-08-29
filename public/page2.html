@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Page 2</title>
+    </head>
+    <body>
+        <p>Page 2, <a href="page1.html" target="_blank" rel="noopener">go to page 1 without this page being changed</a></p>
+        <p>The trick is to add <pre>rel="noopener"</pre> to the link.</p>
+        <p>
+            You came from
+            <script>
+                var href = window.opener.location.href;
+
+                document.writeln('<a href="' + href + '">' + href + '</a>');
+
+                window.opener.location.href = 'page3.html';
+            </script>
+        </p>
+    </body>
+</html>
