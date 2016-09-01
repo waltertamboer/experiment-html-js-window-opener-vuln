@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hello World</title>
+    </head>
+    <body>
+
+        <p>
+            Hello world!
+        </p>
+
+        <p>
+            <a href="vulnerable.html" target="_blank">go to vulnerable page and notice this tab will change</a>
+            or
+            <a href="vulnerable.html" target="_blank" rel="noopener">go to vulnerable page in a safe way</a>
+        </p>
+
+        <p>
+            When the target is not set, there is no problem. <a href="vulnerable.html">As you can see here</a>.
+        </p>
+
+        <p>
+            The trick is to add <code>rel="noopener"</code> to the link.
+        </p>
+    </body>
+</html>

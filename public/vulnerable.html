@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vulnerable Page</title>
+    </head>
+    <body>
+        <p>
+            When this page has been opened via a target _blank link, you will notice that the original page has changed.
+        </p>
+
+        <p>
+            <script>
+                var href;
+
+                if (window.opener) {
+                    href = window.opener.location.href;
+
+                    document.writeln('You came from <a href="' + href + '">' + href + '</a>');
+
+                    window.opener.location.href = 'evil.html';
+                } else {
+                    document.writeln('This page was safely opened.');
+                }
+
+            </script>
+        </p>
+    </body>
+</html>
